@@ -246,7 +246,7 @@
                         class="px-8 py-4 bg-cyber-600 text-white font-bold rounded-xl shadow-[0_0_20px_rgba(0,209,255,0.3)] hover:shadow-[0_0_30px_rgba(0,209,255,0.5)] transition-all hover:-translate-y-1 flex items-center gap-3">
                         Lihat Portofolio <i class="fa-solid fa-arrow-right"></i>
                     </a>
-                    <a href="https://drive.google.com/file/d/10y7R6NpVtbc7TIMj8jJfxKdw20BHRuoV/view?usp=sharing"
+                    <a href="https://drive.google.com/file/d/12NlOiDRO-oXCjuxW_J5kpq2gTTLG1kg5/view?usp=sharing"
                         target="_blank" rel="noopener noreferrer"
                         class="px-8 py-4 bg-dark-800/50 border border-dark-700 text-white font-bold font-mono rounded-xl hover:bg-dark-800 hover:border-cyber-500/50 transition-all flex items-center gap-3">
                         <i class="fa-regular fa-file-pdf text-cyber-400"></i> Unduh_CV
@@ -366,7 +366,22 @@
                     manajemen data, dan kreativitas desain visual.</p>
             </div>
 
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            <style>
+                @media (min-width: 1024px) {
+                    .skills-grid-centered {
+                        grid-template-columns: repeat(10, minmax(0, 1fr));
+                    }
+
+                    .skills-grid-centered>div {
+                        grid-column: span 2 / span 2;
+                    }
+
+                    .skills-grid-centered>div:nth-child(11) {
+                        grid-column-start: 4;
+                    }
+                }
+            </style>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 skills-grid-centered">
                 <!-- Database -->
                 <div
                     class="glass-panel p-8 rounded-3xl relative bento-item group flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300">
@@ -457,6 +472,24 @@
                     <p class="font-bold text-sm text-gray-300 group-hover:text-white transition-colors relative z-10">
                         Microsoft Office</p>
                 </div>
+                <!-- Google Cloud Platform -->
+                <div
+                    class="glass-panel p-8 rounded-3xl relative bento-item group flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300">
+                    <div class="bento-glow"></div>
+                    <i
+                        class="fa-brands fa-google text-4xl text-gray-500 group-hover:text-cyber-400 mb-4 transition-colors relative z-10"></i>
+                    <p class="font-bold text-sm text-gray-300 group-hover:text-white transition-colors relative z-10">
+                        Google Cloud Platform</p>
+                </div>
+                <!-- Big Query -->
+                <div
+                    class="glass-panel p-8 rounded-3xl relative bento-item group flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300">
+                    <div class="bento-glow"></div>
+                    <i
+                        class="fa-solid fa-chart-column text-4xl text-gray-500 group-hover:text-cyber-400 mb-4 transition-colors relative z-10"></i>
+                    <p class="font-bold text-sm text-gray-300 group-hover:text-white transition-colors relative z-10">
+                        Big Query</p>
+                </div>
             </div>
         </div>
     </section>
@@ -488,14 +521,15 @@
                             <div class="bento-glow"></div>
                             <span
                                 class="font-mono inline-block px-3 py-1 bg-cyber-500/10 text-cyber-400 text-xs font-bold rounded-md mb-4 border border-cyber-500/20">Apr
-                                2026 - Jul 2026</span>
+                                2026 - Oct 2026</span>
                             <h4 class="text-2xl font-bold text-white group-hover:text-cyber-400 transition-colors mb-2">
                                 Data Engineer Intern</h4>
                             <h5 class="text-gray-400 font-medium mb-4 text-sm"><i
                                     class="fa-solid fa-building text-cyber-500 mr-2"></i>PT Data Labs Analytics</h5>
-                            <p class="text-gray-400 leading-relaxed text-sm">Merancang dan mengoptimalkan pipeline data,
-                                serta membantu dalam ekstraksi, transformasi, dan pemuatan (ETL) data berskala besar
-                                untuk mendukung inisiatif analitik perusahaan.</p>
+                            <p class="text-gray-400 leading-relaxed text-sm">Membantu proses migrasi data dan eksekusi
+                                pipeline menggunakan Google Cloud Platform (GCP), serta melakukan pengujian Quality
+                                Assurance (QA) guna menjamin integritas, kelancaran, dan keakuratan transfer data antar
+                                sistem.</p>
                         </div>
 
                         <!-- Card 2 -->
@@ -685,7 +719,20 @@
                     inklusif.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <style>
+                @media (min-width: 1024px) {
+                    .projects-grid-centered {
+                        grid-template-columns: repeat(6, minmax(0, 1fr));
+                    }
+                    .projects-grid-centered > div.bento-item {
+                        grid-column: span 2 / span 2;
+                    }
+                    .projects-grid-centered > div.project-center-start {
+                        grid-column-start: 2;
+                    }
+                }
+            </style>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 projects-grid-centered">
 
                 <!-- Project 1: LaporAkses -->
                 <div
@@ -781,7 +828,7 @@
                 <!-- Hidden Data: STOCK PRO -->
                 <div id="proj-stockpro-data" class="hidden">
                     <div class="modal-title">StockPro: Sistem Manajemen Inventaris</div>
-                    <div class="modal-tech">Laravel • MySQL • MVC Pattern • Web App</div>
+                    <div class="modal-tech">Laravel • React • Python AI • MySQL • Web App</div>
                     <div class="modal-image">Image/Logo Stock Pro.png</div>
                     <div class="modal-desc">
                         <h4 class="text-xl font-bold text-white mb-3">Deskripsi Proyek</h4>
@@ -800,6 +847,34 @@
                             <li>Mengintegrasikan sistem autentikasi dan otorisasi multi-peran (seperti Admin dan Staff
                                 Gudang) untuk membatasi hak akses sistem.</li>
                         </ul>
+
+                        <h4 class="text-xl font-bold text-cyber-400 mb-3 mt-8"><i class="fa-solid fa-robot mr-2"></i>Integrasi Fitur AI (Terbaru)</h4>
+                        
+                        <div class="mb-6">
+                            <h5 class="text-lg font-bold text-white mb-2">1. Asisten AI Operasional (Chatbot)</h5>
+                            <p class="text-gray-300 text-sm mb-3">Fitur ini bertindak sebagai "asisten virtual" pintar untuk admin dan staf gudang, yang terintegrasi langsung di dalam aplikasi pada halaman AI Assistant.</p>
+                            <ul class="list-disc ml-5 space-y-2 text-sm text-gray-400">
+                                <li><strong class="text-gray-300">Fungsi Utama:</strong> Memungkinkan pengguna untuk bertanya langsung menggunakan bahasa sehari-hari seputar operasional gudang.</li>
+                                <li><strong class="text-gray-300">Kemampuan:</strong> Menjawab sisa stok barang tertentu, riwayat return, performa vendor/supplier, hingga status transaksi tanpa harus mencari di menu laporan.</li>
+                                <li><strong class="text-gray-300">Teknologi:</strong> Ditenagai oleh Google Gemini API via backend Python (chatbot.py), dengan antarmuka React (Vite) yang responsif dan rapi.</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-6">
+                            <h5 class="text-lg font-bold text-white mb-2">2. AI Forecasting (Peramalan Stok)</h5>
+                            <p class="text-gray-300 text-sm mb-3">Otak analitik prediktif di balik layar yang membuat manajemen inventaris menjadi proaktif, bukan sekadar reaktif.</p>
+                            <ul class="list-disc ml-5 space-y-2 text-sm text-gray-400">
+                                <li><strong class="text-gray-300">Fungsi Utama:</strong> Menganalisis pola data historis dari barang masuk, barang keluar, dan barang return untuk memprediksi tren kebutuhan stok.</li>
+                                <li><strong class="text-gray-300">Kemampuan:</strong> Mencegah <em>stockout</em> dengan memprediksi barang yang akan laris/habis, dan merencanakan pembelian (PO) agar modal tidak tertahan pada <em>dead stock</em>.</li>
+                                <li><strong class="text-gray-300">Teknologi:</strong> Menggunakan engine cerdas Python (forecaster.py) yang memproses tren dan kalkulasi <em>machine learning</em> dari riwayat MySQL.</li>
+                            </ul>
+                        </div>
+
+                        <div class="p-4 bg-cyber-500/10 border border-cyber-500/20 rounded-xl mt-6">
+                            <p class="text-cyber-400 text-sm italic font-medium text-center">
+                                "Dengan tambahan dua fitur ini, StockPro telah berevolusi dari sekadar aplikasi pencatatan inventaris biasa menjadi Sistem Inventaris Berbasis AI (Smart Inventory)."
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -865,7 +940,7 @@
 
                 <!-- Project 4: Data Science -->
                 <div
-                    class="glass-panel rounded-3xl overflow-hidden relative bento-item group flex flex-col h-full hover:-translate-y-2 transition-all duration-300">
+                    class="glass-panel rounded-3xl overflow-hidden relative bento-item group flex flex-col h-full hover:-translate-y-2 transition-all duration-300 project-center-start">
                     <div class="bento-glow"></div>
                     <div class="h-48 relative overflow-hidden shrink-0">
                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
