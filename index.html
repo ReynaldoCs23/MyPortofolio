@@ -724,10 +724,12 @@
                     .projects-grid-centered {
                         grid-template-columns: repeat(6, minmax(0, 1fr));
                     }
-                    .projects-grid-centered > div.bento-item {
+
+                    .projects-grid-centered>div.bento-item {
                         grid-column: span 2 / span 2;
                     }
-                    .projects-grid-centered > div.project-center-start {
+
+                    .projects-grid-centered>div.project-center-start {
                         grid-column-start: 2;
                     }
                 }
@@ -831,6 +833,22 @@
                     <div class="modal-tech">Laravel • React • Python AI • MySQL • Web App</div>
                     <div class="modal-image">Image/Logo Stock Pro.png</div>
                     <div class="modal-desc">
+                        <!-- Video Demo Placeholder -->
+                        <div
+                            class="mb-8 relative rounded-2xl overflow-hidden border border-dark-700 shadow-[0_0_20px_rgba(0,209,255,0.1)]">
+                            <div
+                                class="absolute top-4 left-4 bg-dark-900/80 backdrop-blur-sm text-cyber-400 text-xs px-3 py-1 rounded-full font-mono border border-cyber-500/30 z-10 flex items-center gap-2">
+                                <i class="fa-solid fa-video"></i> Demo Singkat (Placeholder)
+                            </div>
+                            <video class="w-full h-auto" autoplay loop muted playsinline controls>
+                                <source src="Image/StockPro Klip.mp4" type="video/mp4">
+                                Browser Anda tidak mendukung tag video.
+                            </video>
+                            <p class="text-xs text-gray-500 mt-2 p-2 bg-dark-800 text-center italic">* Ganti atribut src
+                                pada tag &lt;source&gt; dengan lokasi file video demo Anda (misal:
+                                Video/stockpro-demo.mp4)</p>
+                        </div>
+
                         <h4 class="text-xl font-bold text-white mb-3">Deskripsi Proyek</h4>
                         <p class="mb-4">Pengembangan sistem inventaris komprehensif berbasis web untuk PT Mara Jaya Dewi
                             Sakti yang dibangun menggunakan framework Laravel. Sistem ini dikembangkan sebagai bagian
@@ -848,31 +866,47 @@
                                 Gudang) untuk membatasi hak akses sistem.</li>
                         </ul>
 
-                        <h4 class="text-xl font-bold text-cyber-400 mb-3 mt-8"><i class="fa-solid fa-robot mr-2"></i>Integrasi Fitur AI (Terbaru)</h4>
-                        
+                        <h4 class="text-xl font-bold text-cyber-400 mb-3 mt-8"><i
+                                class="fa-solid fa-robot mr-2"></i>Integrasi Fitur AI (Terbaru)</h4>
+
                         <div class="mb-6">
                             <h5 class="text-lg font-bold text-white mb-2">1. Asisten AI Operasional (Chatbot)</h5>
-                            <p class="text-gray-300 text-sm mb-3">Fitur ini bertindak sebagai "asisten virtual" pintar untuk admin dan staf gudang, yang terintegrasi langsung di dalam aplikasi pada halaman AI Assistant.</p>
+                            <p class="text-gray-300 text-sm mb-3">Fitur ini bertindak sebagai "asisten virtual" pintar
+                                untuk admin dan staf gudang, yang terintegrasi langsung di dalam aplikasi pada halaman
+                                AI Assistant.</p>
                             <ul class="list-disc ml-5 space-y-2 text-sm text-gray-400">
-                                <li><strong class="text-gray-300">Fungsi Utama:</strong> Memungkinkan pengguna untuk bertanya langsung menggunakan bahasa sehari-hari seputar operasional gudang.</li>
-                                <li><strong class="text-gray-300">Kemampuan:</strong> Menjawab sisa stok barang tertentu, riwayat return, performa vendor/supplier, hingga status transaksi tanpa harus mencari di menu laporan.</li>
-                                <li><strong class="text-gray-300">Teknologi:</strong> Ditenagai oleh Google Gemini API via backend Python (chatbot.py), dengan antarmuka React (Vite) yang responsif dan rapi.</li>
+                                <li><strong class="text-gray-300">Fungsi Utama:</strong> Memungkinkan pengguna untuk
+                                    bertanya langsung menggunakan bahasa sehari-hari seputar operasional gudang.</li>
+                                <li><strong class="text-gray-300">Kemampuan:</strong> Menjawab sisa stok barang
+                                    tertentu, riwayat return, performa vendor/supplier, hingga status transaksi tanpa
+                                    harus mencari di menu laporan.</li>
+                                <li><strong class="text-gray-300">Teknologi:</strong> Ditenagai oleh Google Gemini API
+                                    via backend Python (chatbot.py), dengan antarmuka React (Vite) yang responsif dan
+                                    rapi.</li>
                             </ul>
                         </div>
 
                         <div class="mb-6">
                             <h5 class="text-lg font-bold text-white mb-2">2. AI Forecasting (Peramalan Stok)</h5>
-                            <p class="text-gray-300 text-sm mb-3">Otak analitik prediktif di balik layar yang membuat manajemen inventaris menjadi proaktif, bukan sekadar reaktif.</p>
+                            <p class="text-gray-300 text-sm mb-3">Otak analitik prediktif di balik layar yang membuat
+                                manajemen inventaris menjadi proaktif, bukan sekadar reaktif.</p>
                             <ul class="list-disc ml-5 space-y-2 text-sm text-gray-400">
-                                <li><strong class="text-gray-300">Fungsi Utama:</strong> Menganalisis pola data historis dari barang masuk, barang keluar, dan barang return untuk memprediksi tren kebutuhan stok.</li>
-                                <li><strong class="text-gray-300">Kemampuan:</strong> Mencegah <em>stockout</em> dengan memprediksi barang yang akan laris/habis, dan merencanakan pembelian (PO) agar modal tidak tertahan pada <em>dead stock</em>.</li>
-                                <li><strong class="text-gray-300">Teknologi:</strong> Menggunakan engine cerdas Python (forecaster.py) yang memproses tren dan kalkulasi <em>machine learning</em> dari riwayat MySQL.</li>
+                                <li><strong class="text-gray-300">Fungsi Utama:</strong> Menganalisis pola data historis
+                                    dari barang masuk, barang keluar, dan barang return untuk memprediksi tren kebutuhan
+                                    stok.</li>
+                                <li><strong class="text-gray-300">Kemampuan:</strong> Mencegah <em>stockout</em> dengan
+                                    memprediksi barang yang akan laris/habis, dan merencanakan pembelian (PO) agar modal
+                                    tidak tertahan pada <em>dead stock</em>.</li>
+                                <li><strong class="text-gray-300">Teknologi:</strong> Menggunakan engine cerdas Python
+                                    (forecaster.py) yang memproses tren dan kalkulasi <em>machine learning</em> dari
+                                    riwayat MySQL.</li>
                             </ul>
                         </div>
 
                         <div class="p-4 bg-cyber-500/10 border border-cyber-500/20 rounded-xl mt-6">
                             <p class="text-cyber-400 text-sm italic font-medium text-center">
-                                "Dengan tambahan dua fitur ini, StockPro telah berevolusi dari sekadar aplikasi pencatatan inventaris biasa menjadi Sistem Inventaris Berbasis AI (Smart Inventory)."
+                                "Dengan tambahan dua fitur ini, StockPro telah berevolusi dari sekadar aplikasi
+                                pencatatan inventaris biasa menjadi Sistem Inventaris Berbasis AI (Smart Inventory)."
                             </p>
                         </div>
                     </div>
