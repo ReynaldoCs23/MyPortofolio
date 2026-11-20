@@ -10,11 +10,11 @@
     <meta name="description"
         content="Portofolio Reynaldo Christianto Sarungallo — System Analyst & Data Engineer. Mahasiswa Sistem Informasi UKSW dengan fokus analisis sistem, rekayasa data, dan manajemen basis data.">
     <meta name="author" content="Reynaldo Christianto Sarungallo">
-    <meta name="theme-color" content="#07090f" media="(prefers-color-scheme: dark)">
-    <meta name="theme-color" content="#f6f6f3" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#12110f" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#efebe3" media="(prefers-color-scheme: light)">
     <link rel="canonical" href="https://reynaldocs23.github.io/MyPortofolio/">
 
-    <!-- Open Graph / sosial -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="id_ID">
     <meta property="og:title" content="Reynaldo Christianto | System Analyst & Data Engineer">
@@ -24,11 +24,11 @@
     <meta property="og:image" content="https://reynaldocs23.github.io/MyPortofolio/Image/optimized/pas.jpg">
     <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Favicon (SVG inline, tanpa file tambahan) -->
+    <!-- Favicon -->
     <link rel="icon"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2307090f'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='28' fill='%237cb0ff'%3ERC%3C/text%3E%3C/svg%3E">
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23f04d23'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial Narrow,Arial,sans-serif' font-weight='800' font-size='26' fill='%23141312'%3ERC%3C/text%3E%3C/svg%3E">
 
-    <!-- Tema: dijalankan sebelum render agar tidak ada "flash" warna -->
+    <!-- Tema & flag JS: dijalankan sebelum render agar tidak berkedip -->
     <script>
         (function () {
             var d = document.documentElement;
@@ -41,39 +41,33 @@
         })();
     </script>
 
-    <!-- Fonts -->
+    <!-- Fonts: Archivo (variable width) + IBM Plex Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
         rel="stylesheet">
     <!-- Font Awesome (ikon) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Stylesheet utama -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
     <a class="skip-link" href="#main">Lewati ke konten</a>
 
-    <!-- Preloader singkat -->
+    <!-- Preloader: counter 0→100 lalu tirai naik -->
     <div class="preloader" id="preloader" aria-hidden="true">
-        <div class="preloader-inner">
-            <div class="preloader-mark"><span>R</span><span>C</span><span>.</span></div>
-            <div class="preloader-bar"></div>
+        <div class="pl-top"><span>R.C.S — Portfolio</span><span>©2026</span></div>
+        <div class="pl-bottom">
+            <span class="pl-count" id="plCount">000</span>
+            <span>Loading data…</span>
         </div>
+        <span class="pl-bar" id="plBar"></span>
     </div>
 
-    <!-- Elemen dekoratif global -->
     <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-    <div class="cursor-dot" aria-hidden="true"></div>
-    <div class="cursor-ring" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></div>
     <div class="grain" aria-hidden="true"></div>
-    <div class="ambient" aria-hidden="true">
-        <div class="grid"></div>
-        <div class="blob blob-1" data-depth="30"></div>
-        <div class="blob blob-2" data-depth="-20"></div>
-    </div>
 
     <!-- ================= NAVIGASI ================= -->
     <header class="nav" id="nav">
@@ -81,14 +75,13 @@
             <a href="#home" class="brand" aria-label="Kembali ke beranda">Reynaldo_Christianto_Sarungallo<span
                     class="slash">/&gt;</span></a>
 
-            <!-- Menu Desktop -->
             <nav class="nav-links" aria-label="Navigasi utama">
-                <a href="#home" class="nav-link active">Beranda</a>
-                <a href="#about" class="nav-link">Tentang</a>
-                <a href="#experience" class="nav-link">Pengalaman</a>
-                <a href="#certifications" class="nav-link">Sertifikasi</a>
-                <a href="#projects" class="nav-link">Proyek</a>
-                <a href="#contact" class="btn btn-accent btn-sm nav-cta magnetic">Hubungi</a>
+                <a href="#home" class="nav-link active" data-scramble-hover>Beranda</a>
+                <a href="#about" class="nav-link" data-scramble-hover>Tentang</a>
+                <a href="#experience" class="nav-link" data-scramble-hover>Pengalaman</a>
+                <a href="#certifications" class="nav-link" data-scramble-hover>Sertifikasi</a>
+                <a href="#projects" class="nav-link" data-scramble-hover>Proyek</a>
+                <a href="#contact" class="btn btn-solid btn-sm nav-cta magnetic">Hubungi</a>
             </nav>
 
             <div class="nav-actions">
@@ -97,7 +90,6 @@
                     <i class="fa-solid fa-moon" aria-hidden="true"></i>
                     <i class="fa-solid fa-sun" aria-hidden="true"></i>
                 </button>
-                <!-- Tombol Mobile -->
                 <button class="icon-btn menu-btn" type="button" onclick="toggleMenu()" aria-controls="mobileMenu"
                     aria-expanded="false" aria-label="Buka menu">
                     <i class="fa-solid fa-bars-staggered" id="menuBtn" aria-hidden="true"></i>
@@ -106,14 +98,14 @@
         </div>
     </header>
 
-    <!-- Dropdown Mobile -->
+    <!-- Menu Mobile (layar penuh) -->
     <nav id="mobileMenu" class="mobile-menu" aria-label="Navigasi mobile">
-        <a href="#home" onclick="toggleMenu()">Beranda</a>
-        <a href="#about" onclick="toggleMenu()">Tentang</a>
-        <a href="#experience" onclick="toggleMenu()">Pengalaman</a>
-        <a href="#certifications" onclick="toggleMenu()">Sertifikasi</a>
-        <a href="#projects" onclick="toggleMenu()">Proyek</a>
-        <a href="#contact" onclick="toggleMenu()" class="mobile-cta">Kontak</a>
+        <a href="#home" onclick="toggleMenu()" data-n="01">Beranda</a>
+        <a href="#about" onclick="toggleMenu()" data-n="02">Tentang</a>
+        <a href="#experience" onclick="toggleMenu()" data-n="03">Pengalaman</a>
+        <a href="#certifications" onclick="toggleMenu()" data-n="04">Sertifikasi</a>
+        <a href="#projects" onclick="toggleMenu()" data-n="05">Proyek</a>
+        <a href="#contact" onclick="toggleMenu()" data-n="06" class="mobile-cta">Kontak</a>
     </nav>
 
     <main id="main">
@@ -122,26 +114,29 @@
         <section id="home" class="hero">
             <div class="container hero-grid">
                 <div class="hero-copy">
-                    <span class="typed-badge hero-fade" style="--i:0">
-                        <span class="pulse"><i class="fa-solid fa-terminal" aria-hidden="true"></i></span>
+                    <div class="status hero-fade" style="--i:0">
+                        <span class="term"><i class="fa-solid fa-terminal" aria-hidden="true"></i></span>
                         <span id="typed-text" aria-live="polite"></span><span class="caret"
                             aria-hidden="true">_</span>
-                    </span>
+                    </div>
                     <h1 class="hero-title">
-                        <span class="line"><span>Halo, Saya</span></span>
-                        <span class="line"><span class="name">Reynaldo Christianto</span></span>
+                        <span class="mask hero-hello"><span style="--d:0">Halo, Saya</span></span>
+                        <span class="hero-name">
+                            <span class="mask nm"><span style="--d:1" data-scramble>Reynaldo</span></span>
+                            <span class="mask nm"><span style="--d:2" data-scramble>Christianto</span></span>
+                        </span>
                     </h1>
                     <p class="hero-lead hero-fade" style="--i:2">
                         System Analyst & Data Engineer dengan ketertarikan mendalam pada rekayasa data, analisis sistem,
                         dan pengembangan solusi digital berkinerja tinggi.
                     </p>
                     <div class="hero-ctas hero-fade" style="--i:3">
-                        <a href="#projects" class="btn btn-primary magnetic">
+                        <a href="#projects" class="btn btn-solid magnetic">
                             Lihat Portofolio <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                         </a>
                         <a href="https://drive.google.com/file/d/12NlOiDRO-oXCjuxW_J5kpq2gTTLG1kg5/view?usp=sharing"
-                            target="_blank" rel="noopener noreferrer" class="btn btn-ghost magnetic">
-                            <i class="fa-regular fa-file-pdf icon-accent" aria-hidden="true"></i> Unduh_CV
+                            target="_blank" rel="noopener noreferrer" class="btn magnetic">
+                            <i class="fa-regular fa-file-pdf" aria-hidden="true"></i> Unduh_CV
                         </a>
                     </div>
                     <div class="hero-social hero-fade" style="--i:4">
@@ -153,36 +148,51 @@
                     </div>
                 </div>
 
-                <!-- Foto profil dengan bingkai arch, cincin orbit, dan badge melayang -->
-                <div class="hero-visual">
+                <!-- Foto: halftone (canvas) + "lensa" yang menampilkan foto asli di sekitar kursor -->
+                <figure class="hero-visual" style="margin:0">
                     <div class="portrait" id="portrait">
-                        <div class="portrait-glow" aria-hidden="true"></div>
-                        <div class="portrait-ring" aria-hidden="true"></div>
-                        <div class="portrait-frame">
-                            <img src="Image/optimized/pas.jpg" alt="Reynaldo Christianto" width="800" height="1067"
-                                fetchpriority="high">
-                        </div>
-                        <span class="float-badge b1" aria-hidden="true"><i class="fa-solid fa-database"></i></span>
-                        <span class="float-badge b2" aria-hidden="true"><i class="fa-solid fa-chart-line"></i></span>
-                        <span class="float-badge b3" aria-hidden="true"><i class="fa-brands fa-python"></i></span>
+                        <img class="photo" src="Image/optimized/pas.jpg" alt="Reynaldo Christianto" width="800"
+                            height="1067" fetchpriority="high">
+                        <canvas id="halftone" aria-hidden="true"></canvas>
+                        <span class="portrait-corner tl" aria-hidden="true"></span>
+                        <span class="portrait-corner tr" aria-hidden="true"></span>
+                        <span class="portrait-corner bl" aria-hidden="true"></span>
+                        <span class="portrait-corner br" aria-hidden="true"></span>
+                    </div>
+                    <figcaption class="portrait-meta" aria-hidden="true"><span>Fig. 01</span><span>◎ Hover</span>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <!-- Ticker keahlian (dekoratif; daftar lengkap ada di section Keahlian) -->
+            <div class="ticker" aria-hidden="true">
+                <div class="ticker-track" id="tickerTrack">
+                    <div class="ticker-group">
+                        <span>SQL / Oracle</span><span>Java OOP</span><span>Python Data</span><span>UML /
+                            BPMN</span><span>Web Dev</span><span>UI/UX Design</span><span>Canva</span><span>Video
+                            Editing</span><span>Photography</span><span>Microsoft Office</span><span>Google Cloud
+                            Platform</span><span>Big Query</span>
                     </div>
                 </div>
             </div>
-            <a href="#about" class="scroll-hint" aria-label="Gulir ke bagian Tentang"></a>
         </section>
 
-        <!-- ================= TENTANG SAYA (Bento Grid) ================= -->
+        <!-- ================= TENTANG SAYA ================= -->
         <section id="about" class="section">
             <div class="container">
-                <div class="section-head" data-reveal>
-                    <span class="section-index" aria-hidden="true">01</span>
-                    <h2 class="section-title">Tentang <span class="accent-word">Saya</span></h2>
+                <div class="section-head" data-reveal-group>
+                    <div class="section-label"><span>(01)</span></div>
+                    <h2 class="section-title">
+                        <span class="mask"><span>Tentang</span></span>
+                        <span class="mask"><span style="--d:1" class="accent">Saya</span></span>
+                    </h2>
                 </div>
 
-                <div class="bento" data-stagger>
+                <div class="about-grid">
                     <!-- Bio Text -->
-                    <article class="card card-pad b-bio" data-reveal>
-                        <h3>Profil <span class="accent-word">Profesional</span></h3>
+                    <article class="a-bio" data-reveal>
+                        <span class="cell-tag" aria-hidden="true">A.1</span>
+                        <h3>Profil <span class="accent">Profesional</span></h3>
                         <p>
                             Saya adalah seorang mahasiswa program sarjana Sistem Informasi di Universitas Kristen Satya
                             Wacana dengan fokus keahlian pada analisis sistem dan manajemen basis data. Berbekal fondasi
@@ -198,78 +208,96 @@
                     </article>
 
                     <!-- GPA -->
-                    <article class="card card-pad b-gpa" data-reveal>
-                        <span class="icon-tile"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
-                        <span class="gpa-value" data-count="3.97" data-decimals="2">3.97</span>
-                        <span class="gpa-label">IPK Kumulatif</span>
-                    </article>
-
-                    <!-- Quote -->
-                    <article class="card card-pad b-quote" data-reveal>
-                        <i class="fa-solid fa-quote-left q-mark" aria-hidden="true"></i>
-                        <p>"Kehebatan sebuah teknologi bukan pada seberapa rumit sistemnya, melainkan seberapa baik
-                            orang di baliknya memahami kebutuhan penggunanya."</p>
+                    <article class="a-gpa" data-reveal>
+                        <span class="cell-tag" aria-hidden="true">A.2</span>
+                        <i class="fa-solid fa-graduation-cap ico" aria-hidden="true"></i>
+                        <div>
+                            <span class="gpa-value" data-count="3.97" data-decimals="2">3.97</span>
+                            <div class="gpa-bar" aria-hidden="true"><i></i></div>
+                            <span class="gpa-label" style="display:block;margin-top:.75rem">IPK Kumulatif</span>
+                        </div>
                     </article>
 
                     <!-- Oracle -->
-                    <article class="card card-pad b-oracle" data-reveal>
-                        <span class="icon-tile"><i class="fa-solid fa-database" aria-hidden="true"></i></span>
-                        <div>
-                            <span class="chip">Lisensi 2025</span>
-                            <span class="o-title">Oracle Certified</span>
-                            <span class="o-sub">Database Programming with PL/SQL</span>
-                        </div>
+                    <article class="a-oracle" data-reveal>
+                        <span class="cell-tag" aria-hidden="true">A.3</span>
+                        <i class="fa-solid fa-database ico" aria-hidden="true"></i>
+                        <span class="chip">Lisensi 2025</span>
+                        <span class="o-title">Oracle Certified</span>
+                        <span class="o-sub">Database Programming with PL/SQL</span>
+                    </article>
+
+                    <!-- Quote: kata-kata "menyala" mengikuti scroll -->
+                    <article class="a-quote" data-reveal>
+                        <span class="cell-tag" aria-hidden="true">A.4</span>
+                        <i class="fa-solid fa-quote-left q-mark" aria-hidden="true"></i>
+                        <p id="quoteText">"Kehebatan sebuah teknologi bukan pada seberapa rumit sistemnya, melainkan
+                            seberapa baik orang di baliknya memahami kebutuhan penggunanya."</p>
                     </article>
                 </div>
             </div>
         </section>
 
         <!-- ================= KEAHLIAN TEKNIS ================= -->
-        <section id="skills" class="section">
+        <section id="skills" class="section section-rule">
             <div class="container">
-                <div class="section-head center" data-reveal>
-                    <span class="section-index" aria-hidden="true">02</span>
-                    <h2 class="section-title">Keahlian <span class="accent-word">Teknis</span></h2>
-                    <p class="section-sub">Kombinasi kemampuan pengembangan perangkat lunak, manajemen data, dan
-                        kreativitas desain visual.</p>
+                <div class="section-head" data-reveal-group>
+                    <div class="section-label"><span>(02)</span></div>
+                    <h2 class="section-title">
+                        <span class="mask"><span>Keahlian</span></span>
+                        <span class="mask"><span style="--d:1" class="accent">Teknis</span></span>
+                    </h2>
+                    <p class="section-sub" data-reveal>Kombinasi kemampuan pengembangan perangkat lunak, manajemen
+                        data, dan kreativitas desain visual.</p>
                 </div>
 
                 <div class="skills-grid" data-stagger>
-                    <div class="card skill" data-reveal><i class="fa-solid fa-database" aria-hidden="true"></i>
+                    <div class="skill" data-reveal><span class="num" aria-hidden="true">/01</span><i
+                            class="fa-solid fa-database" aria-hidden="true"></i>
                         <p>SQL / Oracle</p>
                     </div>
-                    <div class="card skill" data-reveal><i class="fa-brands fa-java" aria-hidden="true"></i>
+                    <div class="skill" data-reveal><span class="num" aria-hidden="true">/02</span><i
+                            class="fa-brands fa-java" aria-hidden="true"></i>
                         <p>Java OOP</p>
                     </div>
-                    <div class="card skill" data-reveal><i class="fa-brands fa-python" aria-hidden="true"></i>
+                    <div class="skill" data-reveal><span class="num" aria-hidden="true">/03</span><i
+                            class="fa-brands fa-python" aria-hidden="true"></i>
                         <p>Python Data</p>
                     </div>
-                    <div class="card skill" data-reveal><i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+                    <div class="skill" data-reveal><span class="num" aria-hidden="true">/04</span><i
+                            class="fa-solid fa-diagram-project" aria-hidden="true"></i>
                         <p>UML / BPMN</p>
                     </div>
-                    <div class="card skill" data-reveal><i class="fa-brands fa-html5" aria-hidden="true"></i>
+                    <div class="skill" data-reveal><span class="num" aria-hidden="true">/05</span><i
+                            class="fa-brands fa-html5" aria-hidden="true"></i>
                         <p>Web Dev</p>
                     </div>
-                    <div class="card skill" data-reveal><i class="fa-solid fa-wand-magic-sparkles"
-                            aria-hidden="true"></i>
+                    <div class="skill" data-reveal><span class="num" aria-hidden="true">/06</span><i
+                            class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
                         <p>UI/UX Design</p>
                     </div>
-                    <div class="card skill" data-reveal><i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                    <div class="skill" data-reveal><span class="num" aria-hidden="true">/07</span><i
+                            class="fa-solid fa-layer-group" aria-hidden="true"></i>
                         <p>Canva</p>
                     </div>
-                    <div class="card skill" data-reveal><i class="fa-solid fa-film" aria-hidden="true"></i>
+                    <div class="skill" data-reveal><span class="num" aria-hidden="true">/08</span><i
+                            class="fa-solid fa-film" aria-hidden="true"></i>
                         <p>Video Editing</p>
                     </div>
-                    <div class="card skill" data-reveal><i class="fa-solid fa-camera-retro" aria-hidden="true"></i>
+                    <div class="skill" data-reveal><span class="num" aria-hidden="true">/09</span><i
+                            class="fa-solid fa-camera-retro" aria-hidden="true"></i>
                         <p>Photography</p>
                     </div>
-                    <div class="card skill" data-reveal><i class="fa-brands fa-microsoft" aria-hidden="true"></i>
+                    <div class="skill" data-reveal><span class="num" aria-hidden="true">/10</span><i
+                            class="fa-brands fa-microsoft" aria-hidden="true"></i>
                         <p>Microsoft Office</p>
                     </div>
-                    <div class="card skill" data-reveal><i class="fa-brands fa-google" aria-hidden="true"></i>
+                    <div class="skill" data-reveal><span class="num" aria-hidden="true">/11</span><i
+                            class="fa-brands fa-google" aria-hidden="true"></i>
                         <p>Google Cloud Platform</p>
                     </div>
-                    <div class="card skill" data-reveal><i class="fa-solid fa-chart-column" aria-hidden="true"></i>
+                    <div class="skill" data-reveal><span class="num" aria-hidden="true">/12</span><i
+                            class="fa-solid fa-chart-column" aria-hidden="true"></i>
                         <p>Big Query</p>
                     </div>
                 </div>
@@ -277,33 +305,37 @@
         </section>
 
         <!-- ================= PENGALAMAN ================= -->
-        <section id="experience" class="section">
+        <section id="experience" class="section section-rule">
             <div class="container">
-                <div class="section-head center" data-reveal>
-                    <span class="section-index" aria-hidden="true">03</span>
-                    <h2 class="section-title">Perjalanan <span class="accent-word">Karir</span></h2>
+                <div class="section-head" data-reveal-group>
+                    <div class="section-label"><span>(03)</span></div>
+                    <h2 class="section-title">
+                        <span class="mask"><span>Perjalanan</span></span>
+                        <span class="mask"><span style="--d:1" class="accent">Karir</span></span>
+                    </h2>
                 </div>
 
                 <div class="exp-grid">
                     <!-- Kolom Kerja -->
                     <div>
                         <div class="exp-col-head" data-reveal>
-                            <span class="icon-tile"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></span>
+                            <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
                             <h3>Pengalaman Kerja</h3>
                         </div>
-                        <div class="timeline" data-stagger>
-                            <article class="card card-pad t-item" data-reveal="left">
+                        <div class="timeline" data-timeline>
+                            <span class="timeline-fill" aria-hidden="true"></span>
+                            <article class="t-item" data-reveal>
                                 <span class="dot" aria-hidden="true"></span>
-                                <span class="chip">Apr 2026 - Oct 2026</span>
+                                <span class="t-date">Apr 2026 - Oct 2026</span>
                                 <h4>Data Engineer Intern</h4>
                                 <h5><i class="fa-solid fa-building" aria-hidden="true"></i>PT Data Labs Analytics</h5>
                                 <p>Membantu proses migrasi data dan eksekusi pipeline menggunakan Google Cloud Platform
                                     (GCP), serta melakukan pengujian Quality Assurance (QA) guna menjamin integritas,
                                     kelancaran, dan keakuratan transfer data antar sistem.</p>
                             </article>
-                            <article class="card card-pad t-item" data-reveal="left">
+                            <article class="t-item" data-reveal>
                                 <span class="dot" aria-hidden="true"></span>
-                                <span class="chip">Jul 2024 - Des 2024</span>
+                                <span class="t-date">Jul 2024 - Des 2024</span>
                                 <h4>Teaching Assistant</h4>
                                 <h5><i class="fa-solid fa-university" aria-hidden="true"></i>Matematika Diskret - UKSW
                                 </h5>
@@ -311,9 +343,9 @@
                                     melalui sesi mentoring/praktikum, serta melakukan proses grading tugas secara
                                     komprehensif.</p>
                             </article>
-                            <article class="card card-pad t-item" data-reveal="left">
+                            <article class="t-item" data-reveal>
                                 <span class="dot" aria-hidden="true"></span>
-                                <span class="chip">Jun 2024 - Jul 2024</span>
+                                <span class="t-date">Jun 2024 - Jul 2024</span>
                                 <h4>Graphic Designer</h4>
                                 <h5><i class="fa-solid fa-palette" aria-hidden="true"></i>Hashirama Ramen</h5>
                                 <p>Mendesain materi promosi digital/cetak dan menjaga konsistensi visual branding di
@@ -325,31 +357,32 @@
                     <!-- Kolom Organisasi -->
                     <div>
                         <div class="exp-col-head" data-reveal>
-                            <span class="icon-tile"><i class="fa-solid fa-users" aria-hidden="true"></i></span>
+                            <i class="fa-solid fa-users" aria-hidden="true"></i>
                             <h3>Pengalaman Organisasi</h3>
                         </div>
-                        <div class="timeline" data-stagger>
-                            <article class="card card-pad t-item" data-reveal="right">
+                        <div class="timeline" data-timeline>
+                            <span class="timeline-fill" aria-hidden="true"></span>
+                            <article class="t-item" data-reveal>
                                 <span class="dot" aria-hidden="true"></span>
-                                <span class="chip">2024 - 2025</span>
+                                <span class="t-date">2024 - 2025</span>
                                 <h4>Koordinator</h4>
                                 <h5><i class="fa-solid fa-sitemap" aria-hidden="true"></i>Satuan Tugas Company Visit
                                 </h5>
                                 <p>Memimpin perencanaan dan pelaksanaan kunjungan industri, memastikan kelancaran
                                     logistik, serta menjalin komunikasi strategis dengan pihak perusahaan mitra.</p>
                             </article>
-                            <article class="card card-pad t-item" data-reveal="right">
+                            <article class="t-item" data-reveal>
                                 <span class="dot" aria-hidden="true"></span>
-                                <span class="chip">Feb 2025 - Feb 2026</span>
+                                <span class="t-date">Feb 2025 - Feb 2026</span>
                                 <h4>Koordinator Publikasi</h4>
                                 <h5><i class="fa-solid fa-bullhorn" aria-hidden="true"></i>Himpunan Mahasiswa Sistem
                                     Informasi</h5>
                                 <p>Mengelola standar dokumentasi, strategi konten publikasi organisasi, serta
                                     mensupervisi tim anggota secara terstruktur untuk interaksi digital.</p>
                             </article>
-                            <article class="card card-pad t-item" data-reveal="right">
+                            <article class="t-item" data-reveal>
                                 <span class="dot" aria-hidden="true"></span>
-                                <span class="chip">Aug 2025 - Nov 2025</span>
+                                <span class="t-date">Aug 2025 - Nov 2025</span>
                                 <h4>Liaison Officer (LO)</h4>
                                 <h5><i class="fa-solid fa-handshake" aria-hidden="true"></i>ICAST International
                                     Conference</h5>
@@ -363,23 +396,28 @@
         </section>
 
         <!-- ================= SERTIFIKASI ================= -->
-        <section id="certifications" class="section">
+        <section id="certifications" class="section section-rule">
             <div class="container">
-                <div class="section-head center" data-reveal>
-                    <span class="section-index" aria-hidden="true">04</span>
-                    <h2 class="section-title">Lisensi &amp; <span class="accent-word">Sertifikasi</span></h2>
-                    <p class="section-sub">Pengakuan profesional dan kompetensi teknis di bidang manajemen basis data.
-                    </p>
+                <div class="section-head" data-reveal-group>
+                    <div class="section-label"><span>(04)</span></div>
+                    <h2 class="section-title">
+                        <span class="mask"><span>Lisensi &amp;</span></span>
+                        <span class="mask"><span style="--d:1" class="accent">Sertifikasi</span></span>
+                    </h2>
+                    <p class="section-sub" data-reveal>Pengakuan profesional dan kompetensi teknis di bidang manajemen
+                        basis data.</p>
                 </div>
 
-                <div class="cert-grid" data-stagger>
+                <div class="cert-list">
                     <!-- Cert 1 -->
-                    <article class="card card-pad cert tilt" data-reveal>
-                        <span class="icon-tile"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
+                    <article class="cert" data-reveal>
+                        <span class="cert-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
                         <div>
-                            <span class="chip">Tahun 2025</span>
+                            <span class="chip chip-accent">Tahun 2025</span>
                             <h3>Database Programming with PL/SQL</h3>
                             <h4><i class="fa-solid fa-award" aria-hidden="true"></i> Oracle Academy</h4>
+                        </div>
+                        <div>
                             <p>
                                 Sertifikasi pengembangan program basis data prosedural menggunakan PL/SQL. Mencakup
                                 pembuatan dan pengelolaan <em>stored procedures</em>, <em>functions</em>, serta
@@ -387,28 +425,30 @@
                                 bisnis tingkat lanjut.
                             </p>
                             <a href="https://drive.google.com/file/d/1-jnAJjH_ClBBNKETWlPpeFkJYHkJhY-o/view?usp=drive_link"
-                                target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm magnetic">
-                                <i class="fa-solid fa-arrow-up-right-from-square icon-accent" aria-hidden="true"></i>
+                                target="_blank" rel="noopener noreferrer" class="btn btn-sm magnetic">
+                                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                                 Lihat Sertifikat
                             </a>
                         </div>
                     </article>
 
                     <!-- Cert 2 -->
-                    <article class="card card-pad cert tilt" data-reveal>
-                        <span class="icon-tile"><i class="fa-solid fa-database" aria-hidden="true"></i></span>
+                    <article class="cert" data-reveal>
+                        <span class="cert-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></span>
                         <div>
-                            <span class="chip">Tahun 2024</span>
+                            <span class="chip chip-accent">Tahun 2024</span>
                             <h3>Database Desain &amp; Programming with SQL</h3>
                             <h4><i class="fa-solid fa-award" aria-hidden="true"></i> Oracle Academy</h4>
+                        </div>
+                        <div>
                             <p>
                                 Penyelesaian komprehensif mengenai desain basis data relasional. Pemahaman mendalam
                                 terkait pemodelan data (<em>data modeling</em>), teknik normalisasi, serta pengembangan
                                 <em>query</em> SQL tingkat dasar hingga menengah untuk pengelolaan data terstruktur.
                             </p>
                             <a href="https://drive.google.com/file/d/1V3jShSPmjBzSRCrkSj37W26QdSZrfTP4/view?usp=drive_link"
-                                target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm magnetic">
-                                <i class="fa-solid fa-arrow-up-right-from-square icon-accent" aria-hidden="true"></i>
+                                target="_blank" rel="noopener noreferrer" class="btn btn-sm magnetic">
+                                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                                 Lihat Sertifikat
                             </a>
                         </div>
@@ -418,126 +458,129 @@
         </section>
 
         <!-- ================= PROYEK UNGGULAN ================= -->
-        <section id="projects" class="section">
+        <section id="projects" class="section section-rule">
             <div class="container">
-                <div class="section-head center" data-reveal>
-                    <span class="section-index" aria-hidden="true">05</span>
-                    <h2 class="section-title">Proyek <span class="accent-word">Unggulan</span></h2>
-                    <p class="section-sub">Sistem analitik, pengembangan platform web, dan desain inklusif.</p>
+                <div class="section-head" data-reveal-group>
+                    <div class="section-label"><span>(05)</span></div>
+                    <h2 class="section-title">
+                        <span class="mask"><span>Proyek</span></span>
+                        <span class="mask"><span style="--d:1" class="accent">Unggulan</span></span>
+                    </h2>
+                    <p class="section-sub" data-reveal>Sistem analitik, pengembangan platform web, dan desain inklusif.
+                    </p>
                 </div>
 
                 <div class="projects-grid" data-stagger>
 
                     <!-- Project 1: LaporAkses -->
-                    <article class="card project tilt" data-reveal>
-                        <div class="project-media">
+                    <article class="project" data-reveal>
+                        <div class="project-media" data-view onclick="openModal('proj-laporakses')">
+                            <span class="project-num" aria-hidden="true">P/01</span>
                             <img src="Image/optimized/laporakses.jpg" alt="LaporAkses" loading="lazy" decoding="async"
                                 width="900" height="872">
                         </div>
                         <div class="project-body">
                             <div class="project-meta">
-                                <span class="icon-tile"><i class="fa-solid fa-universal-access"
-                                        aria-hidden="true"></i></span>
+                                <i class="fa-solid fa-universal-access ico" aria-hidden="true"></i>
                                 <span class="chip">Civic Tech</span>
                             </div>
                             <h4>LaporAkses</h4>
                             <p class="project-desc">Platform pelaporan hambatan infrastruktur publik dengan fokus utama
                                 pada aksesibilitas dan desain inklusif bagi masyarakat.</p>
-                            <button type="button" onclick="openModal('proj-laporakses')"
-                                class="btn btn-ghost btn-block">
+                            <button type="button" onclick="openModal('proj-laporakses')" class="btn btn-block">
                                 Detail Proyek <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                             </button>
                         </div>
                     </article>
 
                     <!-- Project 2: STOCK PRO -->
-                    <article class="card project tilt" data-reveal>
-                        <div class="project-media">
+                    <article class="project" data-reveal>
+                        <div class="project-media" data-view onclick="openModal('proj-stockpro')">
+                            <span class="project-num" aria-hidden="true">P/02</span>
                             <img src="Image/optimized/stockpro.jpg" alt="StockPro Inventory" loading="lazy"
                                 decoding="async" width="900" height="491">
                         </div>
                         <div class="project-body">
                             <div class="project-meta">
-                                <span class="icon-tile"><i class="fa-solid fa-boxes-stacked"
-                                        aria-hidden="true"></i></span>
+                                <i class="fa-solid fa-boxes-stacked ico" aria-hidden="true"></i>
                                 <span class="chip">Laravel</span>
                             </div>
                             <h4>StockPro (Sistem Inventaris)</h4>
                             <p class="project-desc">Pengembangan sistem manajemen inventaris berbasis web untuk PT Mara
                                 Jaya Dewi Sakti menggunakan framework Laravel.</p>
-                            <button type="button" onclick="openModal('proj-stockpro')" class="btn btn-ghost btn-block">
+                            <button type="button" onclick="openModal('proj-stockpro')" class="btn btn-block">
                                 Detail Proyek <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                             </button>
                         </div>
                     </article>
 
                     <!-- Project 3: BMC -->
-                    <article class="card project tilt" data-reveal>
-                        <div class="project-media">
+                    <article class="project" data-reveal>
+                        <div class="project-media" data-view onclick="openModal('proj-bmc')">
+                            <span class="project-num" aria-hidden="true">P/03</span>
                             <img src="Image/optimized/bmc-pico.jpg"
                                 onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800'"
                                 alt="Business Model" loading="lazy" decoding="async" width="900" height="636">
-                            <span class="badge-win">1st Winner</span>
+                            <span class="chip chip-accent badge-win">1st Winner</span>
                         </div>
                         <div class="project-body">
                             <div class="project-meta">
-                                <span class="icon-tile"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span>
+                                <i class="fa-solid fa-lightbulb ico" aria-hidden="true"></i>
                                 <span class="chip">Strategy</span>
                             </div>
                             <h4>Business Model Canvas</h4>
                             <p class="project-desc">Pengembangan model bisnis digital untuk platform pembelajaran online
                                 beserta perancangan prototipe web dasar.</p>
-                            <button type="button" onclick="openModal('proj-bmc')" class="btn btn-ghost btn-block">
+                            <button type="button" onclick="openModal('proj-bmc')" class="btn btn-block">
                                 Detail Proyek <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                             </button>
                         </div>
                     </article>
 
                     <!-- Project 4: Data Science -->
-                    <article class="card project tilt project-center-start" data-reveal>
-                        <div class="project-media">
+                    <article class="project project-center-start" data-reveal>
+                        <div class="project-media" data-view onclick="openModal('proj-ds')">
+                            <span class="project-num" aria-hidden="true">P/04</span>
                             <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
-                                alt="Data Science" loading="lazy" decoding="async" width="800" height="500">
+                                alt="Data Science" loading="lazy" decoding="async" width="800" height="600">
                         </div>
                         <div class="project-body">
                             <div class="project-meta">
-                                <span class="icon-tile"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></span>
+                                <i class="fa-solid fa-chart-line ico" aria-hidden="true"></i>
                                 <span class="chip">Machine Learning</span>
                             </div>
                             <h4>Data Science Analysis</h4>
                             <p class="project-desc">Analisis prediktif menggunakan machine learning untuk
                                 mengidentifikasi faktor pembentuk loyalitas pelanggan.</p>
-                            <button type="button" onclick="openModal('proj-ds')" class="btn btn-ghost btn-block">
+                            <button type="button" onclick="openModal('proj-ds')" class="btn btn-block">
                                 Detail Proyek <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                             </button>
                         </div>
                     </article>
 
                     <!-- Project 5: Java MVC -->
-                    <article class="card project tilt" data-reveal>
-                        <div class="project-media">
+                    <article class="project" data-reveal>
+                        <div class="project-media" data-view onclick="openModal('proj-java')">
+                            <span class="project-num" aria-hidden="true">P/05</span>
                             <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800"
-                                alt="Java App" loading="lazy" decoding="async" width="800" height="500">
+                                alt="Java App" loading="lazy" decoding="async" width="800" height="600">
                         </div>
                         <div class="project-body">
                             <div class="project-meta">
-                                <span class="icon-tile"><i class="fa-brands fa-java" aria-hidden="true"></i></span>
+                                <i class="fa-brands fa-java ico" aria-hidden="true"></i>
                                 <span class="chip">Java Desktop</span>
                             </div>
                             <h4>Java MVC Application</h4>
                             <p class="project-desc">Aplikasi desktop berbasis Java OOP dengan arsitektur MVC dan
                                 konektivitas database MySQL (RocketFly).</p>
-                            <button type="button" onclick="openModal('proj-java')" class="btn btn-ghost btn-block">
+                            <button type="button" onclick="openModal('proj-java')" class="btn btn-block">
                                 Detail Proyek <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                             </button>
                         </div>
                     </article>
                 </div>
 
-                <!--
-                    Data detail proyek untuk modal.
-                    Memakai <template> agar isi (termasuk video) TIDAK dimuat sebelum modal dibuka.
-                -->
+                <!-- Data detail proyek untuk modal (<template> = tidak dimuat sebelum dibuka) -->
 
                 <!-- Hidden Data: LaporAkses -->
                 <template id="proj-laporakses-data">
@@ -572,7 +615,6 @@
                     <div class="modal-tech">Laravel • React • Python AI • MySQL • Web App</div>
                     <div class="modal-image">Image/Logo Stock Pro.png</div>
                     <div class="modal-desc">
-                        <!-- Video Demo -->
                         <div class="video-wrap">
                             <span class="chip video-tag"><i class="fa-solid fa-video" aria-hidden="true"></i> Demo
                                 Singkat (Placeholder)</span>
@@ -643,17 +685,16 @@
                             </p>
                         </div>
 
-                        <!-- Tombol Kunjungi Website StockPro -->
                         <div class="live-demo">
                             <div class="ld-info">
-                                <span class="icon-tile"><i class="fa-solid fa-globe" aria-hidden="true"></i></span>
+                                <i class="fa-solid fa-globe" aria-hidden="true"></i>
                                 <div>
                                     <h6>Website / Live Demo</h6>
                                     <p>Akses langsung sistem StockPro secara online</p>
                                 </div>
                             </div>
                             <a href="https://stockpro.web.id/" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-accent btn-sm">
+                                class="btn btn-solid btn-sm">
                                 <span>Buka Website</span>
                                 <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                             </a>
@@ -738,51 +779,64 @@
         <!-- ================= KONTAK ================= -->
         <section id="contact" class="section contact">
             <div class="container">
-                <div class="section-head center" data-reveal>
-                    <span class="section-index" aria-hidden="true">06</span>
-                    <h2 class="section-title contact-title">Mari <span class="accent-word">Berkolaborasi!</span></h2>
-                    <p class="section-sub">Punya ide proyek, tawaran magang, atau sekadar ingin berdiskusi? Jangan ragu
-                        untuk menghubungi saya melalui kontak di bawah ini. Saya terbuka untuk peluang profesional.</p>
+                <div class="section-head" data-reveal-group>
+                    <div class="section-label"><span>(06)</span></div>
+                    <h2 class="section-title contact-title">
+                        <span class="mask"><span>Mari</span></span>
+                        <span class="mask"><span style="--d:1" class="accent">Berkolaborasi!</span></span>
+                    </h2>
+                    <p class="section-sub" data-reveal>Punya ide proyek, tawaran magang, atau sekadar ingin berdiskusi?
+                        Jangan ragu untuk menghubungi saya melalui kontak di bawah ini. Saya terbuka untuk peluang
+                        profesional.</p>
                 </div>
 
-                <div class="contact-grid" data-stagger>
+                <div class="contact-list" data-stagger>
                     <!-- Email -->
-                    <a href="mailto:reynaldochristianto3@gmail.com" class="card contact-card tilt" data-reveal>
+                    <a href="mailto:reynaldochristianto3@gmail.com" class="contact-row" data-reveal>
+                        <i class="fa-solid fa-envelope ci" aria-hidden="true"></i>
+                        <span class="cbody">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">reynaldochristianto3<br>@gmail.com</span>
+                        </span>
                         <i class="fa-solid fa-arrow-right arrow" aria-hidden="true"></i>
-                        <span class="icon-tile"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
-                        <span class="contact-label">Email</span>
-                        <span class="contact-value">reynaldochristianto3<br>@gmail.com</span>
                     </a>
 
                     <!-- Phone -->
-                    <a href="tel:081248039924" class="card contact-card tilt" data-reveal>
+                    <a href="tel:081248039924" class="contact-row" data-reveal>
+                        <i class="fa-solid fa-phone ci" aria-hidden="true"></i>
+                        <span class="cbody">
+                            <span class="contact-label">Telepon / WA</span>
+                            <span class="contact-value">0812-4803-9924</span>
+                        </span>
                         <i class="fa-solid fa-arrow-right arrow" aria-hidden="true"></i>
-                        <span class="icon-tile"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
-                        <span class="contact-label">Telepon / WA</span>
-                        <span class="contact-value">0812-4803-9924</span>
                     </a>
 
                     <!-- LinkedIn -->
                     <a href="https://linkedin.com/in/reynaldo-sarungallo" target="_blank" rel="noopener noreferrer"
-                        class="card contact-card tilt" data-reveal>
+                        class="contact-row" data-reveal>
+                        <i class="fa-brands fa-linkedin-in ci" aria-hidden="true"></i>
+                        <span class="cbody">
+                            <span class="contact-label">Koneksi</span>
+                            <span class="contact-value">Profil LinkedIn</span>
+                        </span>
                         <i class="fa-solid fa-arrow-right arrow" aria-hidden="true"></i>
-                        <span class="icon-tile"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></span>
-                        <span class="contact-label">Koneksi</span>
-                        <span class="contact-value">Profil LinkedIn</span>
                     </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- ================= MODAL PROYEK ================= -->
+    <!-- ================= MODAL PROYEK (drawer dari kanan) ================= -->
     <div id="projectModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="m-title" aria-hidden="true">
         <div class="modal-backdrop" onclick="closeModal()"></div>
         <div class="modal-panel" id="modalContent">
-            <div class="modal-scroll">
-                <button type="button" class="modal-close" onclick="closeModal()" aria-label="Tutup">
+            <div class="modal-top">
+                <span class="mono" aria-hidden="true">Detail Proyek</span>
+                <button type="button" class="icon-btn modal-close" onclick="closeModal()" aria-label="Tutup">
                     <i class="fa-solid fa-xmark" aria-hidden="true"></i>
                 </button>
+            </div>
+            <div class="modal-scroll">
                 <div class="modal-hero">
                     <img id="m-img" src="" alt="Project Cover"
                         onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200'">
@@ -794,12 +848,12 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" onclick="closeModal()" class="btn btn-ghost btn-sm">Tutup Jendela</button>
+                <button type="button" onclick="closeModal()" class="btn btn-sm">Tutup Jendela</button>
             </div>
         </div>
     </div>
 
-    <!-- Tombol Back to Top (dengan cincin progres scroll) -->
+    <!-- Back to Top -->
     <button id="backToTop" class="back-to-top" type="button" aria-label="Kembali ke atas"
         onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
         <svg viewBox="0 0 60 60" aria-hidden="true">
